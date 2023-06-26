@@ -1,0 +1,17 @@
+/* Note: allocate memory yourself */
+
+#include <stdlib.h>
+
+unsigned short *reverse_seq(unsigned short num)
+{
+	unsigned short *array = (unsigned short*)malloc(num * sizeof(short));
+	int i = 0;
+
+	while (num != 0)
+	{
+		array[i] = num;
+		num--;
+		i++;
+	}
+	return array;
+}
